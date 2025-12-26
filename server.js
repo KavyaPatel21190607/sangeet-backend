@@ -31,6 +31,7 @@ app.use(helmet({
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5174',
+  'https://sangeet-future-of-music.vercel.app',
   process.env.CLIENT_URL
 ].filter(Boolean);
 
