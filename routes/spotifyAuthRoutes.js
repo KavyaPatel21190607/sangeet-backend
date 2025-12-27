@@ -27,7 +27,8 @@ router.get('/login', (req, res) => {
         ];
 
         const state = Math.random().toString(36).substring(7);
-        const authorizeURL = spotifyApi.createAuthorizeURL(scopes, state);
+        // Force authorization dialog to show on every login attempt
+        const authorizeURL = spotifyApi.createAuthorizeURL(scopes, state, true);
 
         res.json({
             success: true,
